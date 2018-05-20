@@ -1,5 +1,6 @@
 @import "libs.sass"
 @import "variables.sass"
+@import "fonts.sass"
 
 
 .visually-hidden:not(:focus):not(:active),
@@ -23,4 +24,603 @@ input[type="radio"].visually-hidden
 img 
 	max-width: 100%
 	height: auto
+
+*, *::before, *::after 
+	box-sizing: inherit
+
+
+
+html 
+	box-sizing: border-box;
+
+body
+	margin: 0
+	padding: 0
+
+	font-size: 14px
+	line-height: 21px
+	font-family: "PTSans", serif
+	color: $text-color
+	text-transform: uppercase
+	background-color: #f2f2f2
+
+.button
+	display: block
+	color: #fff
+	line-height: 26px
+	text-align: center
+	vertical-align: middle
+	font: inherit
+	font-size: 21px
+	padding: 
+		left: 30px
+		right: 30px
+		top: 16px
+		bottom: 16px
+	background-color: $active-color
+	font-weight: 700
+	transition: all 0.15s ease
+
+.button:hover, .button:focus
+	background-color: #669ec0
+	color: #fff
+	text-decoration: none
+
+.button:active
+	background-color: #5496bd
+	color: rgba(255, 255, 255, 0.3)
+
+//==========================================
+
+.main-container
+	margin:
+		left: auto
+		right: auto
+	box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2)
+	@include media-breakpoint-up(xl)
+		width: 1200px	
+	 
+
+.main-header
+	position: relative	
+	&__big-logo
+		width: 280px
+		@include media-breakpoint-up(md)
+			width: 460px
+		margin: 
+			left: auto
+			right: auto
+	&__background
+		height: 389px
+		padding: 
+			top: 90px
+		@include media-breakpoint-up(md)
+			height: 517px
+			padding: 
+				top: 77px
+
+		background-image: url("../img/svg/whiteline.svg"), url("../img/index/background2.jpg")
+		background-position: center bottom, center -35px
+		background-repeat: no-repeat, no-repeat
+		@include media-breakpoint-up(md)
+			background-position: center 461px, center center
+
+.main-nav
+	position: relative
+	background: #fff
+	padding:
+		bottom: 56px
+	@include media-breakpoint-up(md)
+		padding: 
+			bottom: 0
+	&__button-close
+		@include media-breakpoint-up(md)
+			display: none
+		position: absolute
+		top: 17px
+		right: 20px
+		width: 23px
+		height: 23px
+		border: none
+		padding: 0
+		margin: 0
+		background-color: transparent
+		cursor: pointer
+		svg
+			fill: #fff
+	&__button-open
+		@include media-breakpoint-up(md)
+			display: none
+		position: absolute
+		width: 23px
+		height: 21px
+		bottom: 18px
+		right: 20px
+		border: none
+		padding: 0
+		margin: 0
+		background-color: transparent
+		cursor: pointer
+		svg
+			fill: $active-color
+	&__list
+		list-style: none
+		padding: 0
+		margin: 0
+		display: flex
+		flex-direction: column
+		@include media-breakpoint-up(md)
+			flex-direction: row
+			justify-content: space-around
+	&__element
+		text-transform: uppercase
+		font-weight: 700
+		a
+			text-align: center
+			display: block
+			padding: 
+				top: 8px
+				bottom: 8px
+			font-size: 18px
+			line-height: 40px
+			color: #fff
+			transition: all 0.15s ease
+			border-bottom: 1px solid #678fa8
+			border-top: 1px solid #9ac2db
+			background-color: $active-color
+			@include media-breakpoint-up(md)
+				color: #000000
+				font-size: 14px
+				line-height: 26px
+				background: none
+				border: none
+				padding: 
+					top: 15px
+					bottom: 15px
+					left: 20px
+					right: 20px
+				margin: 
+					left: 20px
+			&:hover, &:focus
+				text-decoration: none
+				background-color: #669ec0
+				@include media-breakpoint-up(md)
+					background: none
+					color: $active-color
+			&:active
+				color: rgba(255, 255, 255, 0.3)
+	&__logo-wrapper
+		position: absolute
+		left: 50%
+		bottom: -27px
+		margin-left: -51px
+		width: 102px
+		height: 83px
+		@include media-breakpoint-up(md)
+			position: static
+			margin: 
+				left: 45px
+			width: 101px
+			height: 83px
+		@include media-breakpoint-up(lg)
+			width: 190px
+			height: 97px
+	
+.menu-close
+	display: none
+
+.menu-open
+	display: flex
+
+.main-page
+	background-color: #fff
+	padding: 
+		top: 40px
+	@include media-breakpoint-up(md)
+		padding: 
+			top: 54px
+	&__title
+		font-size: 18px
+		line-height: 26px
+		color: #000
+		text-align: center
+		width: 260px
+		margin: 
+			left: auto
+			right: auto
+			bottom: 32px
+		@include media-breakpoint-up(md)
+			font-size: 21px
+			width: 450px
+	&__description
+		text-align: center
+		line-height: 26px
+		width: 260px
+		margin: 
+			left: auto
+			right: auto
+			bottom: 10px
+		@include media-breakpoint-up(md)
+			width: 510px
+	&__top-wrapper
+		padding: 
+			bottom: 36px
+		background-image: url("../img/svg/blueline.svg")
+		background-position: center bottom
+		background-repeat: no-repeat
+		@include media-breakpoint-up(md)
+			background: none
+
+.advantages
+	padding: 0	
+	&__photo
+		height: 262px
+		background-image: url("../img/index/background-1-tablet.jpg")
+		background-size: cover	
+		background-position: center center
+		background-repeat: no-repeat
+		margin:
+			bottom: 22px
+		@include media-breakpoint-up(md)
+			margin: 
+				bottom: 0
+		@include media-breakpoint-up(lg)
+			background-image: url("../img/index/background1.jpg")
+		&-mountins
+			background-image: url("../img/index/background-3-tablet.jpg")
+			background-size: cover	
+			background-repeat: no-repeat
+			margin:
+				bottom: 0
+			@include media-breakpoint-up(lg)
+			background-image: url("../img/index/background3.jpg")
+	&__example
+		margin: 
+			bottom: 25px
+		@include media-breakpoint-up(md)
+			margin: 
+				top: 57px
+				bottom: 49px
+		@include media-breakpoint-up(lg)
+			margin: 
+				top: 57px
+				bottom: 65px
+		&-title
+			padding: 
+				top: 7px
+				bottom: 8px
+				left: 50px
+			color: #000
+			font-size: 21px
+			width: 280px
+			margin: 
+				left: auto
+				right: auto
+				bottom: 16px
+			@include media-breakpoint-up(md)
+				padding: 
+					top: 106px
+					left: 0
+					bottom: 0
+				margin: 
+					bottom: 26px
+				width: 140px
+				text-align: center
+				line-height: 26px
+		&-description
+			padding: 
+				left: 50px
+			width: 280px
+			margin: 
+				left: auto
+				right: auto
+			@include media-breakpoint-up(md)
+				text-align: center
+				width: 162px
+				padding: 
+					left: 0
+			@include media-breakpoint-up(lg)
+				width: 290px
+			
+		&_home
+			background-size: 38px, 37px
+			background-image: url("../img/svg/home.svg")
+			background-repeat: no-repeat
+			@include media-breakpoint-up(md)
+				background-position: top, center
+				background-size: 75px, 72px
+		&_food
+			background-size: 32px, 38px
+			background-image: url(../img/svg/burger.svg)
+			background-repeat: no-repeat
+			@include media-breakpoint-up(md)
+				background-position: top, center
+				background-size: 77px, 68px
+		&_gift
+			padding: 
+				top: 14px
+				bottom: 7px
+			background-size: 35px, 38px
+			background-image: url("../img/svg/gift.svg")
+			background-repeat: no-repeat
+			@include media-breakpoint-up(md)
+				background-position: top, center
+				padding: 
+					top: 106px
+					left: 0
+					bottom: 0
+				background-size: 64px, 75px
+
+			
+.town
+	color: #fff
+	background-color: $active-color
+	padding: 
+		top: 22px
+		bottom: 35px
+	@include media-breakpoint-up(md)
+		padding: 
+			top: 48px
+			bottom: 28px
+	.br-desktop
+		display: none
+		@include media-breakpoint-up(md)
+			display: block
+
+	&__title
+		font-size: 18px
+		line-height: 26px
+		text-align: center
+		width: 280px
+		margin: 
+			left: auto
+			right: auto
+			bottom: 11px
+		@include media-breakpoint-up(md)
+			font-size: 21px
+			width: 160px
+	&__number
+		text-align: center
+		margin: 
+			bottom: 20px
+	&__description
+		text-align: center
+		width: 280px
+		margin: 
+			left: auto
+			right: auto
+		@include media-breakpoint-up(md)
+			width: 170px
+		@include media-breakpoint-up(lg)
+			width: 277px
+	&__description_bridge
+		width: 280px
+		@include media-breakpoint-up(md)
+			width: 160px
+		@include media-breakpoint-up(lg)
+			width: 220px
+
+.advantages__pluses
+	background-color: #eee
+	&-title
+		font-size: 21px
+		line-height: 26px
+		text-align: center
+		width: 280px
+		margin: 
+			top: 30px
+			left: auto
+			right: auto
+			bottom: 10px
+		@include media-breakpoint-up(md)
+			width: 122px
+			margin: 
+				top: 48px
+	&-number
+		text-align: center
+		margin: 
+			bottom: 25px
+	&-description
+		width: 255px
+		text-align: center
+		margin: 
+			left: auto
+			right: auto
+			bottom: 29px
+		@include media-breakpoint-up(md)
+			width: 170px
+			margin: 
+				bottom: 43px
+		@include media-breakpoint-up(lg)
+			width: 300px
+			margin: 
+				bottom: 65px
+	&-description-wide
+		width: 250px
+		@include media-breakpoint-up(md)
+			width: 150px
+		@include media-breakpoint-up(lg)
+			width: 270px
+	&-line
+		height: 1px
+		border-bottom: 1px solid #d6d6d6
+		width: 280px
+		margin: 
+			left: auto
+			right: auto
+		@include media-breakpoint-up(md)
+			display: none
+
+.search
+	padding: 
+		top: 32px
+	@include media-breakpoint-up(md)
+		padding: 
+			top: 60px
+	&__title
+		display: block
+		text-align: center
+		width: 280px
+		color: #000
+		font-size: 21px
+		line-height: 26px
+		margin: 
+			left: auto
+			right: auto
+			bottom: 25px
+		@include media-breakpoint-up(md)
+			font-size: 30px
+			width: 320px
+	&__description
+		line-height: 24px
+		width: 280px
+		text-align: center
+		margin: 
+			left: auto
+			right: auto
+			bottom: 38px
+		@include media-breakpoint-up(md)
+			width: 462px
+			margin: 
+				bottom: 43px
+		@include media-breakpoint-up(lg)
+			margin: 
+				bottom: 50px
+	.br-desktop
+		display: none
+		@include media-breakpoint-up(md)
+			display: block
+	&__button
+		width: 280px
+		margin: 
+			left: auto
+			right: auto
+		@include media-breakpoint-up(md)
+			width: 460px
+	&__map
+		height: 352px
+		background-image: url("../img/index/map.jpg");
+		background-repeat: no-repeat
+		margin: 
+			top: 50px
+		@include media-breakpoint-up(md)
+			margin: 
+				top: 65px
+
+.main-footer
+	padding: 
+		top: 40px
+		bottom: 23px
+	background-color: #fff
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	@include media-breakpoint-up(md)
+		flex-direction: row
+		padding: 
+			top: 37px
+			bottom: 37px
+	&__copyright
+		width: 132px
+		display: flex
+		color: #000000
+		line-height: 26px
+		margin: 
+			top: 36px
+			left: auto
+			right: auto
+		transition: all 0.15s ease
+		@include media-breakpoint-up(md)
+			margin: 
+				top: 2px
+
+		&:hover, &:focus
+			text-decoration: none
+			color: $active-color
+			svg
+				fill: $active-color
+		&:active
+			color: #b2b2b2
+			svg
+				fill: #b2b2b2
+		&-element
+			width: 105px
+			margin: 
+				top: 6px
+				bottom: 0
+		svg
+			transition: all 0.15s ease
+			margin: 
+				top: 4px
+			
+	&__visit
+		color: #000
+		font-weight: 700
+		font-size: 21px
+		line-height: 26px
+		margin: 
+			bottom: 40px
+			left: auto
+			right: auto
+		@include media-breakpoint-up(md)
+			margin: 
+				bottom: 0
+				top: 13px
+	&__social
+		list-style: none
+		padding: 0
+		margin:
+			bottom: 0
+			left: auto
+			right: auto
+		display: flex
+		a
+			display: block
+			width: 46px
+			height: 48px			
+		li
+			background-color: $active-color
+			margin: 
+				right: 6px
+			transition: all 0.15s ease
+			&:hover, &:focus
+				background: darken($active-color, 10%)
+			&:active
+				background: darken($active-color, 15%)
+	&__facebook
+		svg
+			transition: all 0.15s ease
+			fill: #fff
+			margin:
+				left: 19px
+				top: 14px
+		&:active
+			svg
+				fill: rgba(255, 255, 255, 0.3)
+	&__youtube
+		svg
+			transition: all 0.15s ease
+			fill: #fff
+			margin:
+				left: 13px
+				top: 17px
+		&:active
+			svg
+				transition: all 0.15s ease
+				fill: rgba(255, 255, 255, 0.3)
+	&__twitter
+		svg
+			fill: #fff
+			margin:
+				left: 14px
+				top: 17px
+		&:active
+			svg
+				fill: rgba(255, 255, 255, 0.3)
+	
+
+
+
+
+
 

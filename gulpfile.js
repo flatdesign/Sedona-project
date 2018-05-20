@@ -35,13 +35,13 @@ gulp.task("style", function() {
 });
 
 gulp.task("sprite", function() {
-	return gulp.src("img/*.svg")
+	return gulp.src("img/svg/icon-*.svg")
 	.pipe(svgstore({
 		inlineSvg: true
 	}))
 	.pipe(rename("sprite.svg"))
-	.pipe(gulp.dest("build/img"))
-	.pipe(gulp.dest("img"));
+	.pipe(gulp.dest("build/img/svg"))
+	.pipe(gulp.dest("img/svg"));
 });
 
 gulp.task("html", function() {
@@ -102,7 +102,6 @@ gulp.task("build", function (done) {
 		"clean",
 		"copy",
 		"style",
-		"sprite",
 		"script",
 		"html",
 		done

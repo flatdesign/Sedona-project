@@ -2,16 +2,13 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Start template</title>
+    <title>Sedona</title>
     <meta name="description" content="">
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <meta property="og:image" content="path/to/image.jpg">
-    <link rel="icon" href="img/favicon/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
-
     <meta name="theme-color" content="#000">
 
 
@@ -19,15 +16,139 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
-    <h1>Welcome, Danil</h1>
-    <div class="container">
-      <div class="row">
-        <div class="col">adasdasda</div>
-        <div class="col">adasdasda</div>
-        <div class="col">adasdasda</div>
-      </div>
-    </div>
+		<div style="display: none">
+			<include src="img/svg/sprite.svg"></include>
+		</div>
+		<div class="main-container">
+				<header class="main-header">
+						<nav class="main-nav">
+							<button class="main-nav__button-close">
+								<svg width="23" height="23">
+									<use xlink:href="#icon-close"></use>
+								</svg>
+							</button>
+							<ul class="main-nav__list menu-open">
+								<li class="main-nav__element"><a href="#" title="Главная">Главная</a></li>
+								<li class="main-nav__element"><a href="#" title="Фото и видео">Фото и видео</a></li>
+								<div class="main-nav__logo-wrapper">
+									<picture>
+										<source media="(min-width: 1200px)"srcset="img/svg/blue-logo.svg">
+										<img  class="main-nav__logo" width="188" height="96" src="img/svg/logo.svg" alt="Sedona">
+									</picture>	
+								</div>
+								<li class="main-nav__element"><a href="#" title="Форма отзыва">Форма отзыва</a></li>
+								<li class="main-nav__element"><a href="#" title="Html academy">Html academy</a></li>
+								
+							</ul>
+							<button class="main-nav__button-open">
+									<svg width="23" height="21">
+										<use xlink:href="#icon-menu"></use>
+									</svg>
+							</button>			
+						</nav>
+						<div class="main-header__background">
+								<div class="main-header__big-logo"><img src="img/svg/bigLogo-index.svg" alt="Sedona"></div>
+						</div>	
+				</header>
 
-  <script src="js/script.min.js" ></script>
+				<main class="main-page">
+					<div class="main-page__top-wrapper">
+						<h2 class="main-page__title">Седона - небольшой городок в Аризоне, заслуживающий большего!</h2>
+						<p class="main-page__description">Рассмотрим 5 причин, по которым Седона круче чем ГРанд Каньон!</p>
+					</div>
+					<div class="container-fluid advantages">
+						<div class="row no-gutters">
+							<div class="col-md-4 advantages__description town">
+									<h3 class="town__title">Настоящий городок</h3>
+									<p class="town__number">- №1 -</p>
+									<p class="town__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
+							</div>
+							<div class="col-md-8 advantages__photo"></div>
+							<div class="col-md-4 advantages__example">
+								<h3 class="advantages__example-title advantages__example_home">Жилье</h3>
+								<p class="advantages__example-description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+							</div>
+							<div class="col-md-4 advantages__example">
+								<h3 class="advantages__example-title advantages__example_food">Еда</h3>
+								<p class="advantages__example-description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+							</div>
+							<div class="col-md-4 advantages__example">
+								<h3 class="advantages__example-title advantages__example_gift">Сувениры</h3>
+								<p class="advantages__example-description">Не только китайского,<br> но и местного производства</p>
+							</div>
+							
+							<div class="col-md-4 advantages__description town order-md-2">
+								<h3 class="town__title">Там есть <br class="br-desktop"> мост дьявола</h3>
+								<p class="town__number">- №2 -</p>
+								<p class="town__description town__description_bridge">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+							</div>
+							<div class="col-md-8 advantages__photo advantages__photo-mountins order-md-1"></div>
+							<div class="col-md-4 advantages__pluses order-md-3">
+								<h3 class="advantages__pluses-title ">Небольшая площадь</h3>
+								<p class="advantages__pluses-number">- №3 -</p>
+								<p class="advantages__pluses-description">Все интересные места находятся очень близко</p>
+								<div class="advantages__pluses-line"></div>
+							</div>
+							<div class="col-md-4 advantages__pluses order-md-4">
+								<h3 class="advantages__pluses-title">Красивая дорога</h3>
+								<p class="advantages__pluses-number">- №4 -</p>
+								<p class="advantages__pluses-description advantages__pluses-description-wide">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+								<div class="advantages__pluses-line"></div>
+							</div>
+							<div class="col-md-4 advantages__pluses order-md-5">
+								<h3 class="advantages__pluses-title">Мало туристов</h3>
+								<p class="advantages__pluses-number">- №5 -</p>
+								<p class="advantages__pluses-description">Большинство едет в Гранд Каньон и толпится там</p>
+							</div>	
+						</div>
+					</div>
+					<section class="search">
+						<b class="search__title">Заинтересовались?</b>
+						<p class="search__description">Укажите предпологаемые даты поездки,<br class="br-desktop">и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+						<a class="search__button button" href="#">Найти гостиницу</a>
+						<div class="search__map"></div>
+					</section>
+				</main>
+
+				<footer class="main-footer">
+					<p class="main-footer__visit">#visitsedona</p>
+					<ul class="main-footer__social">
+						<li class="main-footer__twitter">
+							<a href="#" title="twitter">
+								<svg width="17" height="15">
+									<use xlink:href="#icon-twitter"></use>
+								</svg>
+							</a>
+						</li>
+
+						<li class="main-footer__facebook">
+							<a href="#" title="facebook">
+								<svg width="8" height="18">
+									<use xlink:href="#icon-facebook"></use>
+								</svg>
+							</a>
+						</li>
+
+						<li class="main-footer__youtube">
+							<a href="#" title="youtube">
+								<svg width="20" height="14">
+									<use xlink:href="#icon-youtube"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+					<a href="#" class="main-footer__copyright" title="Html academy">
+						<p class="main-footer__copyright-element">Разаработано</p>
+						<svg width="27" height="34">
+							<use xlink:href="#icon-htmlacademy"></use>
+						</svg>
+					</p>
+				</footer>
+		</div>
+		
+		
+		
+
+	<script src="js/script.min.js" ></script>	
   </body>
 </html>
