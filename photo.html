@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Sedona</title>
+    <meta name="description" content="">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta property="og:image" content="path/to/image.jpg">
+    <meta name="theme-color" content="#000">
+
+
+    <!-- ================= Стили ================= -->
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body class="body-photo">
+		<div style="display: none">
+			<include src="img/svg/sprite.svg"></include>
+		</div>
+		<div class="main-container">
+				<header class="main-header">
+						<nav class="main-nav">
+							<button class="main-nav__button-close">
+								<svg width="23" height="23">
+									<use xlink:href="#icon-close"></use>
+								</svg>
+							</button>
+							<ul class="main-nav__list menu-open">
+								<li class="main-nav__element"><a href="index.html" title="Главная">Главная</a></li>
+								<li class="main-nav__element"><a href="photo.html" title="Фото и видео">Фото и видео</a></li>
+								<div class="main-nav__logo-wrapper">
+									<picture>
+										<source media="(min-width: 1200px)"srcset="img/svg/blue-logo.svg">
+										<img  class="main-nav__logo" width="188" height="96" src="img/svg/logo.svg" alt="Sedona">
+									</picture>	
+								</div>
+								<li class="main-nav__element"><a href="#" title="Форма отзыва">Форма отзыва</a></li>
+								<li class="main-nav__element"><a href="#" title="Html academy">Html academy</a></li>
+								
+							</ul>
+							<button class="main-nav__button-open">
+									<svg width="23" height="21">
+										<use xlink:href="#icon-menu"></use>
+									</svg>
+							</button>			
+						</nav>
+						<div class="main-header__background">
+								<div class="main-header__big-logo"><img src="img/svg/bigLogo-index.svg" alt="Sedona"></div>
+						</div>	
+				</header>
+
+
+				<main class="photo-page">
+					<h2 class="photo-page__title">
+						Фото и видео
+					</h2>
+					<div class="photo-page__description">Не можете решиться на путешествие из-за Курса? Фотографии помогут вам забыть о политике и экномике.</div>
+					<div class="container-fluid photos">
+						<div class="row no-gutters">
+
+							<div class="col-md-12 photos__card">
+								<div class="photos__wrapper photos__wrapper_big">
+									<picture>
+										<source media="(min-width: 1200px)"srcset="img/photo/photo-1-desktop.jpg">
+										<source media="(min-width: 768px)"srcset="img/photo/photo-1-tablet.jpg">
+										<img  class="photos-img" src="img/photo/photo-1-mobile.jpg" alt="Неродные просторы">
+									</picture>
+								</div>
+								<ul class="photos__list photos__list_big">
+									<li class="photos__element">
+										<h3 class="photos__title">Неродные просторы</h3>
+										<p class="photos__author">Автор фото: Борис</p>
+									</li>
+									<li class="photos__element">
+										<p class="photos__like">1350</p>
+									</li>
+								</ul>
+							</div>
+
+							<div class="col-md-6 col-xl-4 photos__card">
+									<div class="photos__wrapper">
+										<picture>
+											<source media="(min-width: 1200px)"srcset="img/photo/photo-2-desktop.jpg">
+											<source media="(min-width: 768px)"srcset="img/photo/photo-2-tablet.jpg">
+											<img  class="photos-img" src="img/photo/photo-2-mobile.jpg" alt="Sedona">
+										</picture>
+									</div>
+									<ul class="photos__list">
+										<li class="photos__element">
+											<h3 class="photos__title">Местная растительность</h3>
+											<p class="photos__author">Автор фото: Сергей</p>
+										</li>
+										<li class="photos__element">
+											<p class="photos__like">143</p>
+										</li>
+									</ul>
+								</div>
+
+								<div class="col-md-6 col-xl-4 photos__card">
+										<div class="photos__wrapper">
+											<picture>
+												<source media="(min-width: 1200px)"srcset="img/photo/photo-3-desktop.jpg">
+												<source media="(min-width: 768px)"srcset="img/photo/photo-3-tablet.jpg">
+												<img  class="photos-img" src="img/photo/photo-3-mobile.jpg" alt="Sedona">
+											</picture>
+										</div>
+										<ul class="photos__list">
+											<li class="photos__element">
+												<h3 class="photos__title">Дорога на север</h3>
+												<p class="photos__author">Автор фото: Петр</p>
+											</li>
+											<li class="photos__element">
+												<p class="photos__like">96</p>
+											</li>
+										</ul>
+									</div>
+
+									<div class="col-md-6 col-xl-4 photos__card">
+											<div class="photos__wrapper">
+												<picture>
+													<source media="(min-width: 1200px)"srcset="img/photo/photo-4-desktop.jpg">
+													<source media="(min-width: 768px)"srcset="img/photo/photo-4-tablet.jpg">
+													<img  class="photos-img" src="img/photo/photo-4-mobile.jpg" alt="Sedona">
+											</picture>
+											</div>
+											<ul class="photos__list">
+												<li class="photos__element">
+													<h3 class="photos__title">Мост Дьявола</h3>
+													<p class="photos__author">Автор фото: Борис</p>
+												</li>
+												<li class="photos__element">
+													<p class="photos__like">254</p>
+												</li>
+											</ul>
+										</div>
+
+										
+						</div>
+					</div>
+
+					<h2 class="photo-page__title">Вы еще сомневаетесь ?</h2>
+										<p class="photo-page__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+
+					<div class="photo-page__video">
+						<picture>
+							<source media="(min-width: 1200px)"srcset="img/photo/video-desktop.jpg">
+							<source media="(min-width: 768px)"srcset="img/photo/video-tablet.jpg">
+							<img  class="photos-img" src="img/photo/video-mobile.jpg" alt="Sedona">
+						</picture>
+						<div class="photo-page__video video-wrapper">						
+								<ul class="video-wrapper__list">
+									<li class="video-wrapper__element video-wrapper__element_video">
+										<div class="video-wrapper__line">
+											<div class="video-wrapper__scale">
+												<div class="video-wrapper__ball"></div>
+											</div>
+										</div>
+									</li>
+									<li class="video-wrapper__element video-wrapper__element_replay">
+										<svg width="18" height="20.5">
+											<use xlink:href="#icon-replay"></use>
+										</svg>
+									</li>
+									<li class="video-wrapper__element video-wrapper__element_subtitles">
+										<svg width="32" height="20">
+											<use xlink:href="#icon-subtitles"></use>
+										</svg>
+									</li>
+									<li class="video-wrapper__element video-wrapper__element_full">
+										<svg width="20" height="20">
+											<use xlink:href="#icon-full"></use>
+										</svg>
+									</li>
+								</ul>								
+						</div>							
+					</div>
+					
+
+				</main>
+
+
+
+				<footer class="main-footer">
+					<p class="main-footer__visit">#visitsedona</p>
+					<ul class="main-footer__social">
+						<li class="main-footer__twitter">
+							<a href="#" title="twitter">
+								<svg width="17" height="15">
+									<use xlink:href="#icon-twitter"></use>
+								</svg>
+							</a>
+						</li>
+
+						<li class="main-footer__facebook">
+							<a href="#" title="facebook">
+								<svg width="8" height="18">
+									<use xlink:href="#icon-facebook"></use>
+								</svg>
+							</a>
+						</li>
+
+						<li class="main-footer__youtube">
+							<a href="#" title="youtube">
+								<svg width="20" height="14">
+									<use xlink:href="#icon-youtube"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+					<a href="#" class="main-footer__copyright" title="Html academy">
+						<p class="main-footer__copyright-element">Разаработано</p>
+						<svg width="27" height="34">
+							<use xlink:href="#icon-htmlacademy"></use>
+						</svg>
+					</p>
+				</footer>
+		</div>
+		
+	<script src="js/script.min.js" ></script>	
+  </body>
+</html>
