@@ -59,6 +59,7 @@ body
 		bottom: 16px
 	background-color: $active-color
 	font-weight: 700
+	cursor: pointer
 	transition: all 0.15s ease
 
 .button:hover, .button:focus
@@ -69,6 +70,7 @@ body
 .button:active
 	background-color: #5496bd
 	color: rgba(255, 255, 255, 0.3)
+
 
 //==========================================
 
@@ -910,5 +912,653 @@ body
 				svg
 					fill: #fff
 		
+//Form html
+
+.form-page
+	background-color: #fff
+	padding: 
+		top: 40px
+		bottom: 35px
+	@include media-breakpoint-up(md)
+		padding: 
+			top: 72px
+	@include media-breakpoint-up(xl)
+		padding: 
+			top: 112px
+			bottom: 65px
+	&__form
+		@include media-breakpoint-up(md)
+			display: flex
+			flex-wrap: wrap
+	&__container
+		padding: 
+			left: 20px
+			right: 20px
+		@include media-breakpoint-up(md)
+			width: 768px
+			margin: 
+				left: auto
+				right: auto
+			padding: 
+				left: 60px
+				right: 60px
+		@include media-breakpoint-up(xl)
+			width: 1200px
+			padding: 
+				left: 120px
+				right: 120px
+	&__title
+		font-size: 18px
+		line-height: 26px
+		width: 280px
+		text-align: center
+		color: #000
+		margin: 
+			left: auto
+			right: auto
+			bottom: 30px
+		@include media-breakpoint-up(md)
+			width: 500px
+			font-size: 30px
+			margin: 
+				bottom: 33px
+	&__description
+		position: relative
+		line-height: 24px
+		max-width: 450px
+		text-align: center
+		margin: 
+			left: auto
+			right: auto
+			bottom: 0
+		padding: 
+			bottom: 20px
+		border-bottom: 1px solid #e5e5e5
+		@include media-breakpoint-up(md)
+			margin: 
+				bottom: 60px
+			border: none
+		@include media-breakpoint-up(xl)
+			margin: 
+				bottom: 45px		
+				
+	input::placeholder
+		font-weight: 700
+		color: #000000
+		font-size: 18px
+
+.user
+	position: relative
+	padding: 
+		top: 20px
+		bottom: 5px
+	border-bottom: 1px solid #e5e5e5
+	@include media-breakpoint-up(md)
+		padding:
+			left: 57px 
+			top: 0
+			bottom: 0
+		border: none
+		width: 324px
+		margin: 
+			bottom: 52px
+		border-left: 1px solid #dbdbdb
+	@include media-breakpoint-up(xl)
+		width: 480px
+	&__list
+		padding: 
+			left: 0
+		list-style: none
+		@include media-breakpoint-up(md)
+			margin: 
+				bottom: 0
+	&__title
+		font-size: 18px
+		line-height: 26px
+		color: #000
+		text-align: center
+		margin: 
+			bottom: 24px
+		width: 280px
+		@include media-breakpoint-up(md)
+			font-size: 21px
+			width: auto
+			margin: 
+				bottom: 60px
+			text-align: left
+	&__element
+		display: flex
+		align-items: baseline
+		margin: 
+			bottom: 20px
+		&:last-child
+			@include media-breakpoint-up(md)
+				margin-bottom: 0
+		input
+			width: 100px
+			font-weight: 700
+			line-height: 26px
+			font-size: 18px
+			background-color: #f2f2f2
+			padding: 
+				top: 16px
+				left: 19px
+				right: 19px
+				bottom: 16px
+			border: none
+			color: #000
+			flex-grow: 1	
+		label
+			margin: 
+				right: 9px
 
 
+.contacts
+	line-height: 26px
+	padding: 
+		top: 20px
+		bottom: 14px
+	border-bottom: 1px solid #e5e5e5
+	@include media-breakpoint-up(md)
+		width: 100%
+		padding: 
+			bottom: 29px
+		border: none
+	@include media-breakpoint-up(xl)
+		padding: 
+			bottom: 38px
+	&__title
+		font-size: 18px
+		line-height: 26px
+		color: #000
+		width: 280px
+		text-align: center
+		margin: 
+			bottom: 25px
+			left: auto
+			right: auto
+		&::before
+			@include media-breakpoint-up(md)
+				content: ""
+				flex-grow: 1
+				height: 1px
+				width: 20px
+				background-color: #dbdbdb
+				margin: 
+					right: 60px
+		&::after
+			@include media-breakpoint-up(md)
+				content: ""
+				flex-grow: 1
+				height: 1px
+				width: 20px
+				background-color: #dbdbdb
+				margin: 
+					left: 60px
+		@include media-breakpoint-up(md)
+			font-size: 21px
+			width: auto
+			display: flex
+			align-items: center
+		@include media-breakpoint-up(xl)
+			margin: 
+				bottom: 80px
+	&__list
+		padding: 
+			left: 0 
+		list-style: none
+		margin: 
+			bottom: 0
+		@include media-breakpoint-up(xl)
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+	&__element
+		input
+			width: 100%
+			font-weight: 700
+			line-height: 26px
+			font-size: 18px
+			padding: 
+				top: 16px
+				left: 19px
+				right: 70px
+				bottom: 16px
+			margin: 
+				bottom: 14px
+			border: none
+			color: #000
+			flex-grow: 1
+			@include media-breakpoint-up(md)
+				margin: 
+					bottom: 26px
+			@include media-breakpoint-up(xl)
+				width: 315px
+				margin: 
+					bottom: 0
+		label
+			padding: 
+				left: 21px
+			margin: 
+				bottom: 15px
+			@include media-breakpoint-up(xl)
+				padding: 
+					left: 0
+					right: 10px
+				margin: 
+					bottom: 0
+		&-phone
+			background-image: url("../img/svg/phone.svg"), linear-gradient(to left, #e6e6e6 58px, #f2f2f2 58px)
+			background-position: right 19px bottom 19px , 0 0
+			background-size: 19px 19px, contain
+			background-repeat: no-repeat
+		&-email
+			background-image: url("../img/svg/messege.svg"), linear-gradient(to left, #e6e6e6 58px, #f2f2f2 58px)
+			background-position: right 21px bottom 23px , 0 0
+			background-size: 16px 12px, contain
+			background-repeat: no-repeat
+		&_hidden
+			@include media-breakpoint-up(xl)
+				display: none
+
+.impression	
+	line-height: 26px
+	padding: 
+		top: 20px
+		bottom: 14px
+	border-bottom: 1px solid #e5e5e5
+	@include media-breakpoint-up(md)
+		order: -1
+		padding: 
+			top: 0
+			bottom: 0
+		width: 324px
+		border: none
+	@include media-breakpoint-up(xl)
+		width: 480px
+	.radio-indicator
+		position: absolute
+		width: 55px
+		height: 55px
+		border-radius: 50%
+		background-color: #f2f2f2
+		top: 0
+		left: 0
+	
+		
+	.radio-indicator::before
+		opacity: 0
+		content: ""
+		position: absolute
+		width: 21px
+		height: 21px
+		border-radius: 50%
+		background-color: $text-color
+		top: 17px
+		left: 17px
+		transition: all 0.2s ease
+	&__title
+		font-size: 18px
+		line-height: 26px
+		color: #000
+		width: 280px
+		text-align: center
+		margin: 
+			bottom: 30px
+			left: auto
+			right: auto
+		@include media-breakpoint-up(md)
+			font-size: 21px
+			width: auto
+			margin: 
+				bottom: 60px
+			text-align: left
+		@include media-breakpoint-up(xl)
+			padding: 	
+				left: 77px
+	&__list
+		padding: 
+			left: 0
+		list-style: none
+		@include media-breakpoint-up(md)
+			margin: 
+				bottom: 0
+	&__element
+		position: relative
+		padding: 
+			left: 77px
+			top: 15px
+			bottom: 14px
+		margin: 
+			bottom: 13px
+		@include media-breakpoint-up(md)
+			margin: 
+				bottom: 22px
+			&:last-child
+				margin-bottom: 0
+		label
+			margin: 
+				bottom: 0
+			font-weight: 700
+			text-transform: none
+			font-size: 18px
+			color: #000
+		input[type="radio"]:checked + .radio-indicator::before
+			opacity: 1
+
+
+.attraction
+	padding: 
+		top: 20px
+		bottom: 14px
+	border-bottom: 1px solid #e5e5e5
+	@include media-breakpoint-up(md)
+		width: 100%
+		padding: 
+			bottom: 45px
+		border: none
+	@include media-breakpoint-up(xl)
+		padding: 
+			bottom: 70px
+	&__title
+		font-size: 18px
+		line-height: 26px
+		color: #000
+		width: 280px
+		margin: 
+			bottom: 20px
+			left: auto
+			right: auto
+		&::before
+			@include media-breakpoint-up(md)
+				content: ""
+				flex-grow: 1
+				height: 1px
+				width: 20px
+				background-color: #dbdbdb
+				margin: 
+					right: 60px
+		&::after
+			@include media-breakpoint-up(md)
+				content: ""
+				flex-grow: 1
+				height: 1px
+				width: 20px
+				background-color: #dbdbdb
+				margin: 
+					left: 60px
+		@include media-breakpoint-up(md)
+			font-size: 21px
+			width: auto
+			display: flex
+			align-items: center
+			&-shrink
+				width: 290px
+				text-align: center
+		@include media-breakpoint-up(xl)
+			margin: 
+				bottom: 50px
+	&__list
+		list-style: none
+		padding: 
+			left: 0
+			margin: 
+				bottom: 0
+		@include media-breakpoint-up(md)
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+			width: 480px
+			margin: 
+				left: 95px
+				right: 0
+				bottom: 0
+			@include media-breakpoint-up(xl)
+				width: 100%
+				margin: 
+					left: 0
+	&__element
+		margin: 
+			bottom: 24px
+		&:nth-child(1)
+			@include media-breakpoint-up(md)
+				order: -2
+		&:nth-child(3)
+			@include media-breakpoint-up(md)
+				order: -1
+		@include media-breakpoint-up(md)
+			width: 230px
+		@include media-breakpoint-up(xl)
+			width: auto
+			margin: 
+				bottom: 0
+		label
+			position: relative
+			font-size: 18px
+			line-height: 26px
+			text-transform: none
+			font-weight: 700
+			color: #000
+			padding: 
+				left: 78px
+				top: 15px
+				bottom: 15px	
+			margin: 
+				bottom: 0
+		.ckecbox-indicator
+			position: absolute
+			width: 56px
+			height: 56px
+			background-color: #f2f2f2
+			border-radius: 5px
+			top: 0
+			left: 0
+		.ckecbox-indicator::after
+			opacity: 0
+			content: ""
+			position: absolute
+			width: 12px
+			height: 4px
+			background-color: #231f20
+			transform: rotate(45deg)
+			top: 31px
+			left: 16px
+			transition: all 0.2s ease
+		.ckecbox-indicator::before
+			opacity: 0
+			content: ""
+			position: absolute
+			width: 20px
+			height: 4px
+			background-color: #231f20
+			transform: rotate(-45deg)
+			top: 30px
+			left: 22px
+			transition: all 0.2s ease
+		input[type="checkbox"]:checked + .ckecbox-indicator::before
+			opacity: 1
+		input[type="checkbox"]:checked + .ckecbox-indicator::after
+			opacity: 1
+
+.emotion
+	padding: 
+		top: 20px
+	@include media-breakpoint-up(md)
+		padding: 
+			top: 0
+		width: 100%
+	&__title
+		font-size: 18px
+		line-height: 26px
+		color: #000
+		text-align: center
+		margin: 
+			bottom: 20px 
+			left: auto
+			right: auto
+		@include media-breakpoint-up(md)
+			font-size: 21px
+			display: flex
+			align-items: center
+			margin: 
+				bottom: 60px
+		&::before
+			@include media-breakpoint-up(md)
+				content: ""
+				flex-grow: 1
+				height: 1px
+				width: 20px
+				background-color: #dbdbdb
+				margin: 
+					right: 60px
+		&::after
+			@include media-breakpoint-up(md)
+				content: ""
+				flex-grow: 1
+				height: 1px
+				width: 20px
+				background-color: #dbdbdb
+				margin: 
+					left: 60px
+	&__textarea
+		width: 100%
+		height: 160px
+		background-color: #f2f2f2
+		border: none
+		padding: 
+			left: 20px
+			right: 20px
+			top: 22px
+			bottom: 22px
+		font-size: 18px
+		line-height: 26px
+		font-weight: 700
+		color: #000000
+		margin: 
+			bottom: 50px
+		@include media-breakpoint-up(xl)
+			margin: 
+				bottom: 56px
+	textarea::placeholder
+		font-weight: 700
+		color: #000000
+	&__button
+		text-transform: uppercase
+		border: none
+		width: 100%
+		@include media-breakpoint-up(md)
+			width: 324px
+		@include media-breakpoint-up(xl)
+			width: 480px
+	&__surely
+		display: none
+		margin: 
+			bottom: 0
+			top: 18px
+			left: auto
+		width: 196px
+		text-align: right
+		@include media-breakpoint-up(md)
+			display: block
+
+.popup 
+	position: fixed
+	width: 320px
+	top: 30px
+	left: 50%
+	right: 0
+	margin: 
+		left: -160px
+	background-image: linear-gradient(to top, #f2f2f2 98px, #fff 98px)
+	padding: 
+		top: 50px
+		left: 20px
+		right: 20px
+		bottom: 20px
+	box-shadow: 0px 7px 15px 0px rgba(0, 0, 0, 0.15)
+	@include media-breakpoint-up(md)
+		width: 640px
+		margin: 
+			left: -320px
+		padding: 
+			top: 62px
+			left: 95px
+			right: 95px
+			bottom: 44px
+		background-image: linear-gradient(to top, #f2f2f2 145px, #fff 145px)
+	&__title
+		text-align: center
+		font-size: 18px
+		line-height: 26px
+		color: #000
+		margin: 
+			bottom: 30px
+		@include media-breakpoint-up(md)
+			font-size: 30px
+			margin: 
+				bottom: 35px
+	&__description
+		width: 230px
+		margin: 
+			left: auto
+			right: auto
+			bottom: 55px
+		line-height: 24px
+		text-align: center
+		@include media-breakpoint-up(md)
+			width: 430px
+			margin: 
+				bottom: 80px
+	&__button
+		text-transform: uppercase
+		width: 100%
+		border: none
+		min-height: 58px
+	&_failure
+		padding: 
+			top: 46px
+			bottom: 35px
+		background-image: none
+		background-color: #fff
+		@include media-breakpoint-up(md)
+			width: 400px
+			padding: 
+				left: 60px
+				right: 60px
+			margin: 
+				left: -200px
+		.popup__title
+			@include media-breakpoint-up(md)
+				line-height: 40px
+				width: 250px
+				margin: 
+					left: auto
+					right: auto
+		.popup__button
+			width: 178px
+			margin: 
+				left: auto
+				right: auto
+			@include media-breakpoint-up(md)
+				width: 100%
+		.popup__description
+			margin: 
+				bottom: 25px
+			@include media-breakpoint-up(md)
+				width: 280px
+				margin: 
+					bottom: 35px
+					left: auto
+					right: auto
+
+.success
+	&_open
+		display: block
+	&_close
+		display: none
+
+.failure
+	&_open
+		display: block
+	&_close
+		display: none

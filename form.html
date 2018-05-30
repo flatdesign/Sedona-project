@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Sedona</title>
+    <meta name="description" content="">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta property="og:image" content="path/to/image.jpg">
+    <meta name="theme-color" content="#000">
+
+
+    <!-- ================= Стили ================= -->
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+		<div style="display: none">
+			<include src="img/svg/sprite.svg"></include>
+		</div>
+		<div class="main-container">
+				<header class="main-header">
+						<nav class="main-nav">
+							<button class="main-nav__button-close">
+								<svg width="23" height="23">
+									<use xlink:href="#icon-close"></use>
+								</svg>
+							</button>
+							<ul class="main-nav__list menu-open">
+								<li class="main-nav__element"><a href="index.html" title="Главная">Главная</a></li>
+								<li class="main-nav__element"><a href="photo.html" title="Фото и видео">Фото и видео</a></li>
+								<div class="main-nav__logo-wrapper">
+									<picture>
+										<source media="(min-width: 1200px)"srcset="img/svg/blue-logo.svg">
+										<img  class="main-nav__logo" width="188" height="96" src="img/svg/logo.svg" alt="Sedona">
+									</picture>	
+								</div>
+								<li class="main-nav__element"><a href="form.html" title="Форма отзыва">Форма отзыва</a></li>
+								<li class="main-nav__element"><a href="#" title="Html academy">Html academy</a></li>
+								
+							</ul>
+							<button class="main-nav__button-open">
+									<svg width="23" height="21">
+										<use xlink:href="#icon-menu"></use>
+									</svg>
+							</button>			
+						</nav>
+						<div class="main-header__background">
+								<div class="main-header__big-logo"><img src="img/svg/bigLogo-index.svg" alt="Sedona"></div>
+						</div>	
+				</header>
+
+				<main class="form-page">
+					<div class="form-page__container">
+					<h1 class="form-page__title">Оставьте свой отзыв</h1>
+					<p class="form-page__description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+					<form action="POST" class="form-page__form main-form">
+
+						<section class="main-form__user user">
+							<h2 class="user__title">Представьтесь:</h2>
+							<ul class="user__list">
+								<li class="user__element">
+									<label for="name">Имя*:</label>
+									<input type="text" id="name" placeholder="Петр" required>			
+								</li>
+								<li class="user__element">
+									<label for="surname">Фамилия*:</label>
+									<input type="text" id="surname" placeholder="Иванов" required>	
+								</li>
+								<li class="user__element">
+									<label for="patronymic">Отчество:</label>
+									<input type="text" id="patronymic" placeholder="Александрович">	
+								</li>
+							</ul>
+						</section>
+
+						<section class="main-form__contacts contacts">
+							<h2 class="contacts__title">Контактная информация:</h2>
+							<ul class="contacts__list">
+								<li class="contacts__element">
+									<label for="phone"><span class="contacts__element_hidden">Контактный </span>телефон*:</label>
+									<input type="phone" id="phone" class="contacts__element-phone" placeholder="Введите телефон" required>
+								</li>
+								<li class="contacts__element">
+									<label for="email">Электронная почта*:</label>
+									<input type="email" id="email" class="contacts__element-email" placeholder="Введите e-mail" required>
+								</li>
+							</ul>
+						</section>
+
+						<section class="main-form__impression impression">
+							<h2 class="impression__title">Ваше общее впечатление:</h2>
+							<ul class="impression__list">
+								<li class="impression__element">
+									<label>
+										<input type="radio" name="impression" value="positive" id="positive" checked class="visually-hidden">
+										<span class="radio-indicator"></span>
+										Скорее положительное
+									</label>
+								</li>
+								<li class="impression__element">
+									<label>
+										<input type="radio" name="impression" value="negative" id="negative" class="visually-hidden">
+										<span class="radio-indicator"></span>
+										Скорее отрицательное
+									</label>
+								</li>
+								<li class="impression__element">
+									<label>
+										<input type="radio" name="impression" value="neutral" id="neutral" class="visually-hidden">
+										<span class="radio-indicator"></span>
+										Затрудняюсь ответить
+									</label>	
+								</li>
+							</ul>
+						</section>
+
+						<section class="main-form__attraction attraction">
+							<h2 class="attraction__title"><span class="attraction__title-shrink">Посещенные достопримечательности:</span></h2>
+							<ul class="attraction__list">
+								<li class="attraction__element">
+									<label>
+										<input type="checkbox" name="attraction" value="devil's-bridge" checked id="bridge" class="visually-hidden">
+										<span class="ckecbox-indicator"></span>
+										Мост Дьявола
+									</label>
+									
+								</li>
+								<li class="attraction__element">
+									<label>
+										<input type="checkbox" name="attraction" value="slide-park" checked id="park" class="visually-hidden">
+										<span class="ckecbox-indicator"></span>
+										Слайд-парк
+									</label>
+									
+								</li>
+								<li class="attraction__element">
+									<label>
+										<input type="checkbox" name="attraction" value="bell-tower" id="tower" class="visually-hidden">
+										<span class="ckecbox-indicator"></span>
+										Гора-Колокол
+									</label>
+									
+								</li>
+								<li class="attraction__element">
+									<label>
+										<input type="checkbox" name="attraction" value="red-rocks" checked id="rocks" class="visually-hidden">
+										<span class="ckecbox-indicator"></span>
+										Красные скалы
+									</label>
+									
+								</li>
+							</ul>
+						</section>
+
+						<section class="main-form__emotion emotion">
+							<h2 class="emotion__title">Опишите свои эмоции:</h2>
+							<textarea name="emotion" class="emotion__textarea" cols="30" rows="10" placeholder="Опишите все свои восторги"></textarea>
+						</section>
+						<button type="submit" class="button emotion__button">Отправить отзыв</button>
+						<p class="emotion__surely">* - Обязательные поля</p>
+
+						<section class="popup popup_success success_close">
+							<h2 class="popup__title">Ваш отзыв отправлен!</h2>
+							<p class="popup__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+							<button class="button popup__button">Закрыть окно</button>
+						</section>
+
+						<section class="popup popup_failure failure_close">
+							<h2 class="popup__title">Что-то пошло не так!</h2>
+							<p class="popup__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+							<button class="button popup__button">Ок</button>
+						</section>
+					</form>
+				</div>
+				</main>
+
+				<footer class="main-footer">
+					<p class="main-footer__visit">#visitsedona</p>
+					<ul class="main-footer__social">
+						<li class="main-footer__twitter">
+							<a href="#" title="twitter">
+								<svg width="17" height="15">
+									<use xlink:href="#icon-twitter"></use>
+								</svg>
+							</a>
+						</li>
+
+						<li class="main-footer__facebook">
+							<a href="#" title="facebook">
+								<svg width="8" height="18">
+									<use xlink:href="#icon-facebook"></use>
+								</svg>
+							</a>
+						</li>
+
+						<li class="main-footer__youtube">
+							<a href="#" title="youtube">
+								<svg width="20" height="14">
+									<use xlink:href="#icon-youtube"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+					<a href="#" class="main-footer__copyright" title="Html academy">
+						<p class="main-footer__copyright-element">Разаработано</p>
+						<svg width="27" height="34">
+							<use xlink:href="#icon-htmlacademy"></use>
+						</svg>
+					</p>
+				</footer>
+			</div>
+	<script src="js/script.min.js" ></script>	
+  </body>
+</html>
