@@ -85,13 +85,13 @@ gulp.task("clean", function() {
 
 gulp.task('script', function () {
   return gulp.src([
-		"libs/jquery/dist/jquery.min.js",    //подключение библиотек
+		//"libs/jquery/dist/jquery.min.js",    JQuery
 
 
   	"js/script.js" // всегда в конце
   	])
-  .pipe(concat("script.min.js"))
-  .pipe(uglify())
+  .pipe(concat("script.js"))
+  //.pipe(uglify())								минификация
  	.pipe(gulp.dest('build/js/'))
  	.pipe(server.stream());
 });

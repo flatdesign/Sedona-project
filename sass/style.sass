@@ -71,6 +71,10 @@ body
 	background-color: #5496bd
 	color: rgba(255, 255, 255, 0.3)
 
+.button:disabled
+	color: #ffffff
+	background-color: #e5e5e5
+
 
 //==========================================
 
@@ -96,10 +100,14 @@ body
 		height: 389px
 		padding: 
 			top: 90px
+		
 		@include media-breakpoint-up(md)
 			height: 517px
 			padding: 
 				top: 77px
+			margin-top: -27px
+		@include media-breakpoint-up(xl)
+			margin-top: -40px
 
 		background-image: url("../img/svg/whiteline.svg"), url("../img/index/background2.jpg")
 		background-position: center bottom, center -35px
@@ -108,16 +116,23 @@ body
 			background-position: center 461px, center center
 
 .main-nav
-	position: relative
-	background: #fff
+	position: absolute
+	width: 100%
+	background-color: #fff
 	padding:
 		bottom: 56px
 	@include media-breakpoint-up(md)
+		background-color: transparent
+		background-image: linear-gradient(to top, transparent 27px, #fff 27px)
+		position: relative
 		padding: 
 			bottom: 0
+	@include media-breakpoint-up(xl)
+		background-image: linear-gradient(to top, transparent 40px, #fff 40px)
 	&__button-close
 		@include media-breakpoint-up(md)
 			display: none
+		outline: none
 		position: absolute
 		top: 17px
 		right: 20px
@@ -131,8 +146,7 @@ body
 		svg
 			fill: #fff
 	&__button-open
-		@include media-breakpoint-up(md)
-			display: none
+		outline: none	
 		position: absolute
 		width: 23px
 		height: 21px
@@ -143,6 +157,8 @@ body
 		margin: 0
 		background-color: transparent
 		cursor: pointer
+		@include media-breakpoint-up(md)
+			display: none
 		svg
 			fill: $active-color
 	&__list
@@ -190,7 +206,12 @@ body
 					background: none
 					color: $active-color
 			&:active
+				background-color: #5496bd
 				color: rgba(255, 255, 255, 0.3)
+				@include media-breakpoint-up(md)
+					color: rgba(0, 0, 0, 0.3)
+					background: none
+					
 	&__logo-wrapper
 		position: absolute
 		left: 50%
@@ -210,9 +231,14 @@ body
 	
 .menu-close
 	display: none
+	@include media-breakpoint-up(md)
+		display: flex
 
 .menu-open
 	display: flex
+
+.none
+	display: none
 
 .main-page
 	background-color: #fff
@@ -870,22 +896,43 @@ body
 			margin: 
 				top: 23px
 				left: 25px
+			transition: all 0.15s ease
 			svg
 				fill: #5c6870
+			&:hover
+				svg
+					fill: $text-color
+			&:active
+				svg
+					fill: #c1c1c1
 		&_subtitles
 			cursor: pointer
 			margin: 
 				top: 23px
 				left: 133px
+			transition: all 0.15s ease
 			svg
 				fill: #5c6870
+			&:hover
+				svg
+					fill: $text-color
+			&:active
+				svg
+					fill: #c1c1c1
 		&_full
 			cursor: pointer
 			margin: 
 				top: 23px
 				left: 31px
+			transition: all 0.15s ease
 			svg
 				fill: #5c6870
+			&:hover
+				svg
+					fill: $text-color
+			&:active
+				svg
+					fill: #c1c1c1
 		@include media-breakpoint-up(md)
 			&_video
 				order: 2
@@ -1048,6 +1095,13 @@ body
 			border: none
 			color: #000
 			flex-grow: 1	
+			transition: all 0.15s ease
+		input:hover
+			background-color: #e5e5e5
+		input:focus
+			outline: none
+			background-color: #fff
+			box-shadow: inset 0px 0px 0px 4px #e5e5e5
 		label
 			margin: 
 				right: 9px
@@ -1136,6 +1190,13 @@ body
 				width: 315px
 				margin: 
 					bottom: 0
+		
+		input:focus
+			outline: none
+			background-color: #fff
+			box-shadow: inset 0px 0px 0px 4px #e5e5e5
+		input:hover
+			background-color: black
 		label
 			padding: 
 				left: 21px
@@ -1184,6 +1245,7 @@ body
 		background-color: #f2f2f2
 		top: 0
 		left: 0
+		cursor: pointer
 	
 		
 	.radio-indicator::before
@@ -1237,12 +1299,22 @@ body
 			&:last-child
 				margin-bottom: 0
 		label
+			cursor: pointer
 			margin: 
 				bottom: 0
 			font-weight: 700
 			text-transform: none
 			font-size: 18px
 			color: #000
+			transition: all 0.15s ease
+			&:hover, &:focus
+				.radio-indicator
+					background-color: #e5e5e5
+			&:active
+				.radio-indicator
+					background-color: #d5d5d5
+					&::before
+						background-color: #a4a4a4	
 		input[type="radio"]:checked + .radio-indicator::before
 			opacity: 1
 
@@ -1345,7 +1417,20 @@ body
 				bottom: 15px	
 			margin: 
 				bottom: 0
+			cursor: pointer
+			transition: all 0.15s ease
+			&:hover, &:focus
+				.ckecbox-indicator
+					background-color: #e5e5e5
+			&:active
+				.ckecbox-indicator
+					background-color: #d5d5d5
+					&::before
+						background-color: #a4a4a4	
+					&::after
+						background-color: #a4a4a4	
 		.ckecbox-indicator
+			cursor: pointer
 			position: absolute
 			width: 56px
 			height: 56px
